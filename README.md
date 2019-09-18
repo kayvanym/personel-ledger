@@ -22,8 +22,17 @@
 <!-- /vscode-markdown-toc -->
 
 # About this application
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 The "app" is developed as a excercise / training environment for our lectures in ReactJS. This app is aimed at using react features map, arrow functions and filtering of data.
+
+## Resources
+
+This application is built with the following resources
+
+* [React ComponentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount)
+* [React Semantic UI CSS](https://react.semantic-ui.com)
+* [Randomuser.me](https://randomuser.me)
 
 ## <a name='AvailableScripts'></a>Available Scripts
 
