@@ -13,7 +13,7 @@
 	* [`npm run build` fails to minify](#npmrunbuildfailstominify)
 * [Prerequisites](#Prerequisites)
 * [Procedure](#Procedure)
-* [Publish your app to Github pages](#Deploying-a-React-App*-to-GitHub-Pages)
+* [Publish your app to Github pages](#DeployingaReactApp*toGitHubPages)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
