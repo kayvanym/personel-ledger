@@ -28,7 +28,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 The "app" is developed as a excercise / training environment for our lectures in ReactJS. This app is aimed at using react features map, arrow functions and filtering of data.
 
-This application is published to [Github Pages:](https://hogskolan-i-boras.github.io/personel-ledger/, "Personel Ledger on Github Pages")
+This application is published to [Github Pages](https://hogskolan-i-boras.github.io/personel-ledger/ "Personel Ledger on Github Pages")
 
 ## Resources
 
