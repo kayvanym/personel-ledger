@@ -28,7 +28,10 @@ export default class FetchRandomUser extends Component {
         }
         return (
             // This is what we return to the screen, using Semantic UI CSS.
-            <div>              
+            <div> 
+                <header>
+                    <h1>Personel Legder of ACME Inc.</h1>
+                    </header>             
                 <div class="ui card">
                     <div class="image">
                     <img src={this.state.person.picture.large} alt={this.state.person.name.first} />
