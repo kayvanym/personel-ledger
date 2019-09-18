@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/personel-ledger/static/css/main.bd8b06e2.chunk.css",
+    "main.js": "/personel-ledger/static/js/main.f9bc4efa.chunk.js",
+    "main.js.map": "/personel-ledger/static/js/main.f9bc4efa.chunk.js.map",
+    "runtime~main.js": "/personel-ledger/static/js/runtime~main.a01c0b1c.js",
+    "runtime~main.js.map": "/personel-ledger/static/js/runtime~main.a01c0b1c.js.map",
+    "static/css/2.c98029e8.chunk.css": "/personel-ledger/static/css/2.c98029e8.chunk.css",
+    "static/js/2.119639a9.chunk.js": "/personel-ledger/static/js/2.119639a9.chunk.js",
+    "static/js/2.119639a9.chunk.js.map": "/personel-ledger/static/js/2.119639a9.chunk.js.map",
+    "index.html": "/personel-ledger/index.html",
+    "precache-manifest.bda83db144645da8dd33d79fee3c7d87.js": "/personel-ledger/precache-manifest.bda83db144645da8dd33d79fee3c7d87.js",
+    "service-worker.js": "/personel-ledger/service-worker.js",
+    "static/css/2.c98029e8.chunk.css.map": "/personel-ledger/static/css/2.c98029e8.chunk.css.map",
+    "static/css/main.bd8b06e2.chunk.css.map": "/personel-ledger/static/css/main.bd8b06e2.chunk.css.map",
+    "static/media/semantic.min.css": "/personel-ledger/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
