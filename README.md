@@ -4,6 +4,8 @@
 	* [`npm test`](#npmtest)
 	* [`npm run build`](#npmrunbuild)
 	* [`npm run eject`](#npmruneject)
+    * [predeploy with `npm run build`](#props)
+    * [deploy to Gh pages with `npm run deploy`](#props)
 * [Learn More](#LearnMore)
 	* [Code Splitting](#CodeSplitting)
 	* [Analyzing the Bundle Size](#AnalyzingtheBundleSize)
@@ -178,7 +180,7 @@ The remainder of this document contains a tutorial on creating a React app (usin
     
     * The commands shown in the following steps can all be issued from within the app's folder.
 
-4. **Add some properties to the app's `package.json` file.** (3 minutes)
+4. <a name='props'><a/> **Add some properties to the app's `package.json` file.** (3 minutes)
 
     * At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `personel-ledger`, I added the following property:
     
