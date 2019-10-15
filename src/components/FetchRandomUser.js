@@ -26,7 +26,7 @@ export default class FetchRandomUser extends Component {
     allpersons = allpersons.filter(
       person => Date.parse(person.registered.date) > Date.parse("2014-01-01") //members in the last 5 years
     );
-    persons = persons.filter((person, index) => index < 3);
+    allpersons = allpersons.filter((person, index) => index < 3);
 
     return (
       // This is what we return to the screen, using Semantic UI CSS.
