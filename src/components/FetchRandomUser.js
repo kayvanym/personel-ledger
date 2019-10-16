@@ -31,33 +31,42 @@ export default class FetchRandomUser extends Component {
   }
 
   handleNext = () => {
-    if (this.state.currentPosition * 3 < this.state.recentPersons.length) {
-      this.setState({ currentPosition: this.state.currentPosition + 1 });
-    }
-    this.hideButtons();
-  };
-
-  handlePrev = () => {
-    if (this.state.currentPosition > 1) {
-      this.setState({ currentPosition: this.state.currentPosition - 1 });
-    }
-    this.hideButtons();
-  };
-
-  hideButtons = () => {
-    if (this.state.currentPosition === 1) {
-      this.setState({ hidePrev: true });
-    } else {
-      this.setState({ hidePrev: false });
+    let currpos = this.state.currentPosition;
+    if (currpos * 3 < this.state.recentPersons.length) {
+      currpos++;
+      this.setState({ currentPosition: currpos });
     }
 
-    if (this.state.currentPosition * 3 >= this.state.recentPersons.length) {
+    if (currpos * 3 >= this.state.recentPersons.length) {
       this.setState({ hideNext: true });
     } else {
       this.setState({ hideNext: false });
     }
-    console.log("Current position:" + this.state.currentPosition);
-    console.log("Total persons:" + this.state.recentPersons.length);
+    if (currpos === 1) {
+      this.setState({ hidePrev: true });
+    } else {
+      this.setState({ hidePrev: false });
+    }
+  };
+
+  handlePrev = () => {
+    let currpos = this.state.currentPosition;
+
+    if (currpos > 1) {
+      currpos--;
+      this.setState({ currentPosition: currpos });
+    }
+
+    if (currpos * 3 >= this.state.recentPersons.length) {
+      this.setState({ hideNext: true });
+    } else {
+      this.setState({ hideNext: false });
+    }
+    if (currpos === 1) {
+      this.setState({ hidePrev: true });
+    } else {
+      this.setState({ hidePrev: false });
+    }
   };
 
   // This is the rendering function of the component, this is what we output to the screen.
@@ -87,8 +96,8 @@ export default class FetchRandomUser extends Component {
           <button
             className={
               this.state.hidePrev
-                ? "ui left labeled icon button hidden"
-                : "ui left labeled icon button"
+                ? "ui left labeled icon button"
+                : "ui left labeled icon button primary"
             }
             onClick={this.handlePrev}
           >
@@ -98,8 +107,8 @@ export default class FetchRandomUser extends Component {
           <button
             className={
               this.state.hideNext
-                ? "ui right labeled icon button hidden"
-                : "ui right labeled icon button"
+                ? "ui right labeled icon button"
+                : "ui right labeled icon button primary"
             }
             onClick={this.handleNext}
           >
