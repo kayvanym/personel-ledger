@@ -3,41 +3,19 @@ import React, { Component } from "react";
 export default class FetchRandomUser extends Component {
   // Default states for component is set here
   state = {
-    loading: true,
-    allPersons: [],
-    recentPersons: [],
     currentPosition: 1,
     hideNext: false,
     hidePrev: true
   };
 
-  // Asynchronus function that fecth data from an api and put in a person object.
-  async componentDidMount() {
-    const url = "https://api.randomuser.me/?results=30";
-    const response = await fetch(url);
-    const data = await response.json();
-
-    let recentPersons = data.results.filter(
-      person => Date.parse(person.registered.date) > Date.parse("2014-01-01")
-    );
-
-    this.setState({
-      allPersons: data.results,
-      recentPersons: recentPersons,
-      loading: false
-    });
-
-    console.log("data fetched");
-  }
-
   handleNext = () => {
     let currpos = this.state.currentPosition;
-    if (currpos * 3 < this.state.recentPersons.length) {
+    if (currpos * 3 < this.props.recentPersons.length) {
       currpos++;
       this.setState({ currentPosition: currpos });
     }
 
-    if (currpos * 3 >= this.state.recentPersons.length) {
+    if (currpos * 3 >= this.props.recentPersons.length) {
       this.setState({ hideNext: true });
     } else {
       this.setState({ hideNext: false });
@@ -57,7 +35,7 @@ export default class FetchRandomUser extends Component {
       this.setState({ currentPosition: currpos });
     }
 
-    if (currpos * 3 >= this.state.recentPersons.length) {
+    if (currpos * 3 >= this.props.recentPersons.length) {
       this.setState({ hideNext: true });
     } else {
       this.setState({ hideNext: false });
@@ -71,23 +49,18 @@ export default class FetchRandomUser extends Component {
 
   // This is the rendering function of the component, this is what we output to the screen.
   render() {
-    /*
-   //for workshop2  
-    let { person: allpersons } = this.state;
-
-    allpersons = allpersons.filter(
-      person => Date.parse(person.registered.date) > Date.parse("2014-01-01") //members in the last 5 years
-    );
-    allpersons = allpersons.filter((person, index) => index < 3);
-   */
-
-    let { recentPersons, currentPosition } = this.state;
+    let { currentPosition } = this.state;
+    let { recentPersons } = this.props;
 
     let filtered = [...recentPersons];
     filtered = filtered.filter(
       (p, index) =>
         index >= (currentPosition - 1) * 3 && index < currentPosition * 3
     );
+
+    if (recentPersons.length === 0) {
+      return <div>didn't get any person</div>;
+    }
 
     return (
       // This is what we return to the screen, using Semantic UI CSS.
