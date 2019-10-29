@@ -10,7 +10,11 @@ class Menu extends Component {
         <div class="right menu">
           <div class="item">
             <div class="ui transparent icon input">
-              <input type="text" placeholder="Search..." />
+              <input
+                type="text"
+                placeholder="Search..."
+                onChange={e => this.props.OnSearch(e)}
+              />
               <i class="search link icon"></i>
             </div>
           </div>
