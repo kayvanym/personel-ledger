@@ -28,7 +28,7 @@ export default class FetchRandomUser extends Component {
       <React.Fragment>
         <div
           class="ui input"
-          style={{ marginTop: "20px", marginRight: "20px", width: "20px;" }}
+          style={{ marginTop: "20px", marginRight: "20px" }}
         >
           <input
             type="text"
