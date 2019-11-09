@@ -65,7 +65,7 @@ export default class FetchRandomUser extends Component {
     return (
       // This is what we return to the screen, using Semantic UI CSS.
       <div>
-        <p className="left" style={{ width: "400px" }}>
+        <p className="left" style={{ width: "230px" }}>
           <button
             className={
               this.state.hidePrev
@@ -110,13 +110,6 @@ export default class FetchRandomUser extends Component {
                   <div className="mail">
                     <i className="user mail"></i> {person.email}
                   </div>
-                </div>
-                <div class="extra content">
-                  <a> Country of origin: {person.nat}</a>
-                </div>
-                <div className="extra content">
-                  Address: {person.location.street.name}, {person.location.city}{" "}
-                  {person.location.state} {person.location.postcode}{" "}
                 </div>
               </div>
             </div>
