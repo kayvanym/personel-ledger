@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FetchRandomUser from "./components/FetchRandomUser";
+import RecentMembers from "./components/RecentMembers";
 import Menu from "./components/Menu";
 import Table from "./components/Table";
 
@@ -114,23 +114,12 @@ class App extends Component {
     });
   }
 
-  //event handler
-  //handle the Follow Button click
-  handlePersonClick(person) {
-    alert(
-      "Do you want to follow " +
-        person.name.first +
-        " " +
-        person.name.last +
-        "?"
-    );
-  }
   render() {
     return (
       <div className="App">
         <Menu OnSearch={this.handleSearch} />
 
-        <FetchRandomUser recentPersons={this.state.recentPersons} />
+        <RecentMembers recentPersons={this.state.recentPersons} />
 
         <Table
           allPersons={this.state.searchedPerson}
